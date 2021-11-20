@@ -1,0 +1,137 @@
+@import "~@/index.less";
+@import "~@/config/styles/bgc.less";
+
+.menu {
+  height: 100%;
+  background: #efefef;
+  padding: 0 3px;
+
+  .menuHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5px;
+
+    .title {
+      font-size: 35px;
+      font-weight: 700;
+      color: #222;
+    }
+  }
+
+  .menuContainer {
+    height: calc(100% - 60px);
+    overflow: auto;
+
+    .menuList {
+      cursor: pointer;
+
+      .menuTitle {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          height: 40px;
+          font-weight: 700;
+          color: #333;
+
+          &:hover {
+            color: #333;
+          }
+
+          .Icon {
+            font-size: 20px;
+          }
+        }
+
+        .close {
+          .menuItem {
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+            margin-bottom: 0px;
+            height: 0px;
+            transition: all 0.3s;
+
+            .link {
+              padding: 0 15px;
+              display: block;
+              width: 100%;
+              height: 100%;
+              color: #ccc;
+              border-radius: 5px;
+              display: none;
+
+              &:hover {
+                color: #ccc;
+              }
+            }
+
+            .active {
+              background-color: #ccc;
+              font-weight: 700;
+              color: #333;
+              display: none;
+            }
+
+            &:hover {
+              background-color: #ccc;
+              border-radius: 5px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .itemList {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          padding: 0 10px;
+
+          .menuItem {
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+
+            .link {
+              padding: 0 15px;
+              display: block;
+              width: 100%;
+              height: 100%;
+              color: #333;
+              border-radius: 5px;
+              display: block;
+              transition: all 0.3s;
+
+              &:hover {
+                color: #666;
+              }
+            }
+
+            .active {
+              background-color: #ccc;
+              font-weight: 700;
+              color: #fff;
+              padding-left: 15px;
+              border-radius: 5px;
+            }
+
+            &:hover {
+              background-color: #ccc;
+              border-radius: 5px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

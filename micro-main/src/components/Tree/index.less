@@ -1,0 +1,152 @@
+@import "~@/index.less";
+@import "~@/config/styles/bgc.less";
+
+:global(.ant-tree) {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0);
+  color: #3784b1;
+  font-size: 14px;
+}
+
+// tree每个item
+:global(.ant-tree-treenode) {
+  position: relative;
+  margin-bottom: 6px;
+  padding: 0 0 !important;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #74a0f1 !important;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+// item 被选中
+:global(.ant-tree-treenode-selected) {
+  background-color: #74a0f1 !important;
+  width: 100%;
+  box-shadow: 0 2px 5px 2px #5378f0;
+}
+
+// 文本
+:global(.ant-tree-node-content-wrapper) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba(250, 250, 250, 0) !important;
+    width: 100% !important;
+  }
+}
+
+// 选中文本
+:global(.ant-tree-node-selected) {
+  background-color: rgba(250, 250, 250, 0) !important;
+}
+
+// 每个item 左侧icon
+:global(.ant-tree-switcher) {
+  line-height: 35px;
+  width: 15px;
+}
+
+.treeWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  background-image: @treebgc;
+  width: 220px;
+  height: 100%;
+  transition: all 0.2s;
+
+  .treeList {
+    width: 220px;
+    height: 100%;
+    text-align: left;
+    padding-top: 30px;
+    transition: all 0.2s;
+  }
+
+  .closeTree {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 100px;
+    line-height: 100px;
+    background-image: linear-gradient(to left, #c8e4f0, #bad0f3);
+    border-radius: 3px;
+    box-shadow: -1px 0px 5px 1px #89a3f8;
+    cursor: pointer;
+    color: #2455f5;
+    transition: all 0.5s;
+
+    &:hover {
+      width: 30px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 95px;
+      text-align: center;
+      color: #fff;
+      transition: all 0.2s;
+    }
+  }
+}
+
+.treeClose {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 0px;
+  // transform: translateX(-100%);
+  transition: all 0.2s;
+  // z-index: 999;
+
+  .treeList {
+    width: 0px;
+    height: 100%;
+    text-align: left;
+    padding-top: 30px;
+    display: none;
+    transition: all 0.2s;
+  }
+
+  .closeTree {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 100px;
+    line-height: 100px;
+    background-image: linear-gradient(to bottom, #c8e4f0, #bad0f3);
+    border-radius: 3px;
+    box-shadow: -1px 0px 5px 2px #89a3f8;
+    cursor: pointer;
+    color: #2455f5;
+    transform: translate(100%, -50%);
+    transition: all 0.5s;
+    z-index: 999;
+
+    &:hover {
+      width: 30px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 95px;
+      text-align: center;
+      color: #fff;
+      transition: all 0.2s;
+    }
+  }
+}
